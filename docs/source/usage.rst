@@ -34,6 +34,7 @@ For example:
 
 Java code
 ------------
+
 .. code-block:: java
    :caption: prime.java
    public class Main {
@@ -56,9 +57,11 @@ Java code
          System.out.println(num + " is not a prime number.");
      }
    }
-   
+≈
+
 JS code
 ------------ 
+
 .. code-block:: javascript
    :caption: prime.js
    // input from the user
@@ -70,4 +73,4 @@ JS code
 
    // display a random number
    console.log(`Random value between ${min} and ${max} is ${a}`);
-
+≈
