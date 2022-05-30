@@ -36,7 +36,6 @@ Java code
 ------------
 
 .. code-block:: java
-   :caption: prime.java
 
    public class Main {
 
@@ -63,8 +62,8 @@ JS code
 ------------ 
 
 .. code-block:: javascript
-   :caption: prime.js
-   
+
+   :caption: prime.js   
    // input from the user
    const min = parseInt(prompt("Enter a min value: "));
    const max = parseInt(prompt("Enter a max value: "));
