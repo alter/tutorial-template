@@ -35,6 +35,7 @@ For example:
 Java code
 ------------
 .. code-block:: java
+   :caption: prime.java
    public class Main {
 
      public static void main(String[] args) {
@@ -59,6 +60,7 @@ Java code
 JS code
 ------------ 
 .. code-block:: javascript
+   :caption: prime.js
    // input from the user
    const min = parseInt(prompt("Enter a min value: "));
    const max = parseInt(prompt("Enter a max value: "));
@@ -68,3 +70,4 @@ JS code
 
    // display a random number
    console.log(`Random value between ${min} and ${max} is ${a}`);
+
