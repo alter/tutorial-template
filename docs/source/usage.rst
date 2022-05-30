@@ -36,7 +36,6 @@ Java code
 ------------
 
 .. code-block:: java
-
    :caption: prime.java
 
    public class Main {
@@ -64,7 +63,6 @@ JS code
 ------------ 
 
 .. code-block:: javascript
-
    :caption: prime.js
    
    // input from the user
