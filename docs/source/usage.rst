@@ -32,3 +32,36 @@ For example:
 >>> lumache.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
 
+.. code-block:: java
+   public class Main {
+
+     public static void main(String[] args) {
+
+       int num = 29;
+       boolean flag = false;
+       for (int i = 2; i <= num / 2; ++i) {
+         // condition for nonprime number
+         if (num % i == 0) {
+           flag = true;
+           break;
+         }
+       }
+
+       if (!flag)
+         System.out.println(num + " is a prime number.");
+       else
+         System.out.println(num + " is not a prime number.");
+     }
+   }
+   
+ 
+.. code-block:: javascript
+   // input from the user
+   const min = parseInt(prompt("Enter a min value: "));
+   const max = parseInt(prompt("Enter a max value: "));
+
+   // generating a random number
+   const a = Math.floor(Math.random() * (max - min + 1)) + min;
+
+   // display a random number
+   console.log(`Random value between ${min} and ${max} is ${a}`);
