@@ -1,4 +1,10 @@
 .h2 {
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 150%;
+  color: green;
+}
+
+body {
+  background-color: lightgrey;
+  color: blue;
 }
