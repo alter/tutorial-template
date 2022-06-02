@@ -1,10 +1,339 @@
-.h2 {
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 150%;
-  color: green;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  background-color: blue;
-  color: red;
-}
+    body {
+      background: #171D23;
+      font-family: PT Sans;
+      line-height: 40px;
+      color: #9ba6b2;
+    }
+
+    main {
+      font-family: PT Sans;
+      line-height: 40px;
+      color: #9ba6b2;   
+    }
+
+    main p {
+      font-family: PT Sans;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 40px;
+      color: #9ba6b2;
+    }
+
+     main h1 {
+      font-family: PT Sans;
+      line-height: 40px;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .main_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      height: 100%;
+    }
+
+    .main_block {
+      display: flex;
+      align-items: center;
+    }
+
+    .main_info {
+      margin-left: 60px;
+    }
+
+    .main_img {
+      width: 145px;
+      height: 130px;
+    }
+
+    .main_title {
+      font-family: PT Sans;
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 700;
+      color: #9BA6B2;
+
+      margin-bottom: 10px;
+    }
+
+    .main_subtitle {
+      font-family: PT Sans;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 40px;
+      color: #9BA6B2;
+    }
+
+    
+
+    .menu_triangle {
+      position: absolute;
+      top: 10px;
+      width: 0;
+      height: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 17px solid transparent;
+      border-right: 17px solid transparent;
+      border-bottom: 10px solid #242F38;
+    }
+
+    .menu_wrapper .menu_block_list {
+      padding-bottom: 0;
+    }
+
+    .menu_wrapper .menu_block_list:last-child {
+      padding-top: 18px;
+    }
+
+    .menu_ecosystem {
+      right: 0;
+      left: auto;
+      transform: translateX(0%);
+    }
+    .menu_ecosystem .menu_block {
+      width: 1050px;
+      padding-bottom: 35px;
+    }
+    .menu_ecosystem .menu_triangle {
+      right: 25px;
+      left: auto;
+      transform: translateX(0%);
+    }
+
+    .mobile {
+      position: absolute;
+      left: 0px;
+      top: 0;
+      display: none;
+    }
+
+    .burgerbutton {
+      position: relative;
+      margin-left: 20px;
+      z-index: 20;
+      cursor: pointer;
+      margin-top: 22px;
+      height: 16px;
+      width: 17px;
+      display: flex;
+      align-items: center;
+    }
+
+    .burgerbutton_line {
+      width: 17px;
+      height: 2px;
+      background: #59666F;
+    }
+    .burgerbutton:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 17px;
+      height: 2px;
+      background: #59666F;
+      transition: 0.3s all;
+    }
+    .burgerbutton:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 17px;
+      height: 2px;
+      background: #59666F;
+      transition: 0.3s all;
+    }
+
+    .active {
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,.4);
+    }
+
+    .active .burgerbutton:before {
+      transform: rotate(45deg);
+      bottom: 7px;
+    }
+    .active .burgerbutton:after {
+      transform: rotate(-45deg);
+      top: 7px;
+    }
+    .active .burgerbutton_line {
+      display: none;
+    }
+    .active .mobile_sidebar {
+      left: 0;
+    }
+
+    .mobile_sidebar {
+      position: fixed;
+      top: 0;
+      left: -350px;
+      height: 100vh;
+      width: 300px;
+      padding-left: 20px;
+      background: #171d23;
+      transition: 0.3s all;
+    }
+
+    .mobile_list {
+      display: flex;
+      flex-direction: column;
+      margin-top: 55px;
+      height: 100%;
+    overflow: auto;
+
+    }
+
+    .mobile_list .header_menu_link {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+
+    .mobile_menu_title {
+      display: flex;
+      align-items: center;
+      font-family: PT Sans;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      color: #9BA6B2;
+      opacity: 0.8;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s all;
+    }
+    .mobile_menu_title:hover {
+      color: #f8f9fb;
+    }
+
+    .mobile_menu_title_img {
+      margin-left: 9px;
+      transform: rotate(180deg);
+    }
+
+    .mobile_active .mobile_menu {
+      display: block;
+    }
+
+    .mobile_active .mobile_menu_title_img {
+      transform: rotate(0deg);
+    }
+
+    .mobile_menu_item:first-child {
+      margin-bottom: 21px;
+    }
+
+    .mobile_group_title {
+      font-family: PT Sans;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      color: #59666F;
+      opacity: 0.8;
+      text-transform: uppercase;
+      margin-bottom: 19px;
+    }
+
+    .mobile_menu {
+      display: none;
+      margin-top: 20px;
+      margin-left: 30px;
+    }
+
+    .mobile_item_title {
+      margin-left: 20px;
+      font-family: PT Sans;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #F8F9FB;
+      opacity: 0.9;
+      transition: 0.3s all;
+    }
+
+    .mobile_item_img {
+      width: 26px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .mobile_menu_link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .mobile_menu_link:not(:first-child) {
+      margin-top: 17px;
+    }
+
+    .mobile_menu_link:hover .mobile_item_title {
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: 1300px) {
+      .main_title {
+        font-size: 40px;
+      }
+
+      .main_subtitle {
+        font-size: 25px;
+        line-height: 40px;
+      }
+      
+      .mobile {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 765px) {
+      .main_block {
+        flex-direction: column;
+        align-items: center;
+      }
+      .main_info {
+        margin-top: 35px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media screen and (max-width: 375px) {
+      .main_img {
+        width: 112px;
+        height: 100px;
+      }
+      .main_title {
+        margin-top: 25px;
+        font-size: 25px;
+        line-height: 25px;
+      }
+
+      .main_subtitle {
+        font-size: 15px;
+        line-height: 25px;
+      }
+    }
